@@ -96,6 +96,7 @@ const ContactPage: React.FC = () => {
                                     <div className="space-y-3 sm:space-y-4 text-light-text text-sm sm:text-base">
                                         <p><strong>Address:</strong> {CONTACT_INFO.address}</p>
                                         <p><strong>Phone:</strong> <a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-primary transition-colors">{CONTACT_INFO.phone}</a></p>
+                                        <p><strong>After Hours:</strong> <a href={`tel:${CONTACT_INFO.afterHoursPhone}`} className="hover:text-primary transition-colors">{CONTACT_INFO.afterHoursPhone}</a></p>
                                     </div>
                                     <div className="mt-8">
                                         <h3 className="text-xl sm:text-2xl font-bold font-display text-dark-text mb-4">Hours of Operation</h3>

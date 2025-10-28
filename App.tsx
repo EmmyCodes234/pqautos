@@ -7,6 +7,8 @@ import ServicesPage from './pages/ServicesPage';
 import CarSalesPage from './pages/CarSalesPage';
 import ContactPage from './pages/ContactPage';
 import GalleryPage from './pages/GalleryPage';
+import FooterDemoPage from './pages/FooterDemoPage';
+import AboutPage from './pages/AboutPage';
 import { AnimatePresence } from 'framer-motion';
 
 const ScrollToTop: React.FC = () => {
@@ -28,10 +30,12 @@ const AppContent: React.FC = () => {
                 <AnimatePresence mode="wait">
                     <Routes location={location}>
                         <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
                         <Route path="/services" element={<ServicesPage />} />
                         <Route path="/sales" element={<CarSalesPage />} />
                         <Route path="/gallery" element={<GalleryPage />} />
                         <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/footer-demo" element={<FooterDemoPage />} />
                     </Routes>
                 </AnimatePresence>
             </main>

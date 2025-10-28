@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './Logo';
-import Tooltip from './Tooltip';
 
 const NavItem: React.FC<{ to: string; children: React.ReactNode; onClick: () => void }> = ({ to, children, onClick }) => {
     return (
@@ -45,41 +44,38 @@ const Header: React.FC = () => {
                     <Logo className="h-12 w-12 text-primary" />
                 </NavLink>
                 <nav className="hidden md:flex space-x-2" role="navigation" aria-label="Main navigation">
-                    <Tooltip text="Go to Homepage"><NavItem to="/" onClick={closeMenu}>Home</NavItem></Tooltip>
-                    <Tooltip text="Explore Our Services"><NavItem to="/services" onClick={closeMenu}>Services</NavItem></Tooltip>
-                    <Tooltip text="View Available Cars"><NavItem to="/sales" onClick={closeMenu}>Car Sales</NavItem></Tooltip>
-                    <Tooltip text="See Our Work"><NavItem to="/gallery" onClick={closeMenu}>Gallery</NavItem></Tooltip>
-                    <Tooltip text="Get in Touch"><NavItem to="/contact" onClick={closeMenu}>Contact</NavItem></Tooltip>
+                    <NavItem to="/" onClick={closeMenu}>Home</NavItem>
+                    <NavItem to="/about" onClick={closeMenu}>About</NavItem>
+                    <NavItem to="/services" onClick={closeMenu}>Services</NavItem>
+                    <NavItem to="/sales" onClick={closeMenu}>Car Sales</NavItem>
+                    <NavItem to="/gallery" onClick={closeMenu}>Gallery</NavItem>
+                    <NavItem to="/contact" onClick={closeMenu}>Contact</NavItem>
                 </nav>
                 <div className="hidden md:flex items-center space-x-4">
-                    <Tooltip text="Call us now">
-                        <NavLink 
-                            to="/contact" 
-                            className="flex items-center text-primary font-display font-bold tracking-wider text-sm uppercase hover:text-primary-hover transition-colors"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                            </svg>
-                            Call Now
-                        </NavLink>
-                    </Tooltip>
+                    <NavLink 
+                        to="/contact" 
+                        className="flex items-center text-primary font-display font-bold tracking-wider text-sm uppercase hover:text-primary-hover transition-colors"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                        Call Now
+                    </NavLink>
                 </div>
                 <div className="md:hidden">
-                    <Tooltip text={isOpen ? 'Close Menu' : 'Open Menu'}>
-                        <button 
-                            onClick={toggleMenu} 
-                            className="text-dark-text focus:outline-none z-50 relative p-1 rounded-sm focus-visible:ring-2 focus-visible:ring-primary"
-                            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
-                            aria-expanded={isOpen}
-                            aria-controls="mobile-menu"
-                        >
-                            {isOpen ? (
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                            ) : (
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                            )}
-                        </button>
-                    </Tooltip>
+                    <button 
+                        onClick={toggleMenu} 
+                        className="text-dark-text focus:outline-none z-50 relative p-1 rounded-sm focus-visible:ring-2 focus-visible:ring-primary"
+                        aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                        aria-expanded={isOpen}
+                        aria-controls="mobile-menu"
+                    >
+                        {isOpen ? (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        ) : (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        )}
+                    </button>
                 </div>
             </div>
             <AnimatePresence>
@@ -95,6 +91,7 @@ const Header: React.FC = () => {
                     >
                         <nav className="flex flex-col items-center py-4 space-y-2" role="navigation" aria-label="Mobile navigation">
                            <NavItem to="/" onClick={closeMenu}>Home</NavItem>
+                           <NavItem to="/about" onClick={closeMenu}>About</NavItem>
                            <NavItem to="/services" onClick={closeMenu}>Services</NavItem>
                            <NavItem to="/sales" onClick={closeMenu}>Car Sales</NavItem>
                            <NavItem to="/gallery" onClick={closeMenu}>Gallery</NavItem>
