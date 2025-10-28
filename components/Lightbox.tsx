@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 // Fix: Import Variants type from framer-motion to correctly type animation variants.
 import { motion, AnimatePresence, Variants } from 'framer-motion';
+import OptimizedImage from './ImageOptimizer';
 
 interface LightboxProps {
     images: { src: string; alt: string }[];
@@ -107,16 +108,11 @@ const Lightbox: React.FC<LightboxProps> = ({ images, selectedIndex, onClose, onN
 
                     <div className="relative w-full h-full flex items-center justify-center p-8 sm:p-16" onClick={(e) => e.stopPropagation()}>
                         <AnimatePresence initial={false} custom={direction}>
-                            <motion.img
+                            <OptimizedImage
                                 key={selectedIndex}
                                 src={currentImage.src}
                                 alt={currentImage.alt}
                                 className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
-                                custom={direction}
-                                variants={imageVariants}
-                                initial="enter"
-                                animate="center"
-                                exit="exit"
                             />
                         </AnimatePresence>
                     </div>

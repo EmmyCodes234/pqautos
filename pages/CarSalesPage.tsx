@@ -5,6 +5,7 @@ import { CAR_BRANDS } from '../constants';
 import { motion, useInView, Variants } from 'framer-motion';
 import Tooltip from '../components/Tooltip';
 import SimpleLogoLoop from '../components/SimpleLogoLoop';
+import OptimizedImage from '../components/ImageOptimizer';
 
 const carImages = [
     { src: '/cars/cars.jpg', alt: 'Quality pre-owned vehicle' },
@@ -23,7 +24,7 @@ const CarImage: React.FC<{ src: string, alt: string, variants?: any }> = ({ src,
         transition={{ duration: 0.3 }}
         variants={variants}
     >
-        <img src={src} alt={alt} className="w-full h-full object-cover" loading="lazy" />
+        <OptimizedImage src={src} alt={alt} className="w-full h-full object-cover" />
     </motion.div>
 );
 

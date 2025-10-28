@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 import { motion, useInView, Variants } from 'framer-motion';
 import AnimatedSection from '../components/AnimatedSection';
 import Tooltip from '../components/Tooltip';
+import VideoOptimizer from '../components/VideoOptimizer';
+import OptimizedImage from '../components/ImageOptimizer';
 
 const ToolIcon: React.FC<{ className?: string }> = ({ className }) => (
     <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3 3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
     </svg>
 );
 
@@ -62,37 +64,33 @@ const HomePage: React.FC = () => {
             transition={{ duration: 0.4, ease: "easeInOut" }}
         >
             {/* Hero Section */}
-            <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
+            <section className="relative min-h-[500px] sm:min-h-screen flex items-center justify-center text-center overflow-hidden">
+                <VideoOptimizer
+                    src="/coastal.mp4"
+                    className="absolute z-0 w-full h-full object-cover"
                 >
-                    <source src="/coastal.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
-                </video>
+                </VideoOptimizer>
                 <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="relative z-20 px-4">
-                    <h1 className="text-4xl sm:text-6xl md:text-8xl font-black font-display uppercase tracking-widest text-white drop-shadow-lg">
+                    className="relative z-20 px-4 py-12 sm:py-0">
+                    <h1 className="text-3xl sm:text-5xl md:text-7xl font-black font-display uppercase tracking-widest text-white drop-shadow-lg">
                         Beyond <span className="text-primary">Performance</span>
                     </h1>
-                    <p className="mt-4 text-base sm:text-lg md:text-2xl max-w-3xl mx-auto text-gray-200">
+                    <p className="mt-4 text-sm sm:text-base md:text-xl max-w-2xl sm:max-w-3xl mx-auto text-gray-200">
                         From expert repairs to quality car sales, we have you covered.
                     </p>
-                    <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                         <Tooltip text="Book your appointment now">
                             <motion.div 
                                 whileHover={{ scale: 1.03 }} 
                                 whileTap={{ scale: 0.98 }}
                                 transition={{ type: "spring", stiffness: 200, damping: 15 }}
                             >
-                                <Link to="/services" className="inline-block bg-primary text-white font-bold font-display uppercase tracking-wider py-3 px-6 text-sm sm:text-base sm:py-3 sm:px-8 rounded-sm shadow-lg transition-transform duration-300">
+                                <Link to="/services" className="inline-block bg-primary text-white font-bold font-display uppercase tracking-wider py-2.5 px-5 sm:py-3 sm:px-7 text-xs sm:text-sm rounded-sm shadow-lg transition-transform duration-300">
                                     Schedule a Service
                                 </Link>
                             </motion.div>
@@ -103,7 +101,7 @@ const HomePage: React.FC = () => {
                                 whileTap={{ scale: 0.98 }}
                                 transition={{ type: "spring", stiffness: 200, damping: 15 }}
                             >
-                                <Link to="/sales" className="inline-block bg-transparent border-2 border-white text-white font-bold font-display uppercase tracking-wider py-3 px-6 text-sm sm:text-base sm:py-3 sm:px-8 rounded-sm shadow-lg transition-colors duration-300 hover:bg-white hover:text-dark-text">
+                                <Link to="/sales" className="inline-block bg-transparent border-2 border-white text-white font-bold font-display uppercase tracking-wider py-2.5 px-5 sm:py-3 sm:px-7 text-xs sm:text-sm rounded-sm shadow-lg transition-colors duration-300 hover:bg-white hover:text-dark-text">
                                     View Car Inventory
                                 </Link>
                             </motion.div>
@@ -142,7 +140,7 @@ const HomePage: React.FC = () => {
             <div className="bg-white py-16 sm:py-20">
                  <div className="container mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
                     <AnimatedSection>
-                        <img src="/pq1.jpg" alt="Expert mechanic working on a car" className="rounded-lg shadow-2xl" loading="lazy" />
+                        <OptimizedImage src="/pq1.jpg" alt="Expert mechanic working on a car" className="rounded-lg shadow-2xl" />
                     </AnimatedSection>
                     <AnimatedSection delay={0.2}>
                         <h2 className="text-3xl sm:text-4xl font-bold font-display mb-6">Why Choose <span className="text-primary">PQ Autos?</span></h2>

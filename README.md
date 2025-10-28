@@ -42,3 +42,26 @@ You can also deploy manually:
 
 Make sure to set the following environment variables in your Netlify dashboard:
 - `GEMINI_API_KEY` - Your Gemini API key for AI features
+
+## Asset Optimization
+
+To optimize media assets for faster loading:
+
+1. Run the optimization script:
+   `npm run optimize`
+
+2. Follow the guide to compress:
+   - Videos (coastal.mp4)
+   - Images in public/cars, public/our work, and root public directory
+   - SVG icons in public/car icons
+
+Recommended compression settings:
+- JPEG: Quality 80-85%
+- PNG: Use lossy compression
+- Video: CRF 28-30 for web
+- SVG: Remove unnecessary metadata
+
+For best results, use tools like:
+- FFmpeg for video compression
+- ImageOptim/TinyPNG for images
+- SVGOMG for SVG files

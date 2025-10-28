@@ -2,6 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
 import Lightbox from '../components/Lightbox';
+import OptimizedImage from '../components/ImageOptimizer';
 
 const galleryImages = [
     { src: '/our work/work.jpg', alt: 'Automotive repair work in progress' },
@@ -72,7 +73,7 @@ const GalleryPage: React.FC = () => {
                                 variants={itemVariants}
                                 onClick={() => setSelectedImage(index)}
                             >
-                                <img src={image.src} alt={image.alt} className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" loading="lazy" />
+                                <OptimizedImage src={image.src} alt={image.alt} className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" />
                                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
                                     <p className="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Image</p>
                                 </div>
