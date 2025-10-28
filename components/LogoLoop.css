@@ -1,0 +1,89 @@
+.logoloop {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 1%, black 99%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 1%, black 99%, transparent);
+  isolation: isolate;
+}
+
+.logoloop__track {
+  display: flex;
+  width: fit-content;
+  will-change: transform;
+}
+
+.logoloop__list {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: var(--logoloop-gap, 32px);
+}
+
+.logoloop__item {
+  display: flex;
+  align-items: center;
+  height: var(--logoloop-logoHeight, 28px);
+  margin: 0;
+  padding: 0;
+}
+
+.logoloop__link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.logoloop__link:focus {
+  outline: 2px solid var(--logoloop-focusColor, #2563eb);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.logoloop--scale-hover .logoloop__link:hover {
+  transform: scale(1.1);
+}
+
+.logoloop__node {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logoloop__node > svg {
+  height: 100%;
+  width: auto;
+}
+
+.logoloop__item img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.logoloop--fade::before,
+.logoloop--fade::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.logoloop--fade::before {
+  left: 0;
+  background: linear-gradient(to right, var(--logoloop-fadeColor, white), transparent);
+}
+
+.logoloop--fade::after {
+  right: 0;
+  background: linear-gradient(to left, var(--logoloop-fadeColor, white), transparent);
+}
