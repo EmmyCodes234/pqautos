@@ -19,8 +19,8 @@ const carImages = [
 
 const CarImage: React.FC<{ src: string, alt: string, variants?: any }> = ({ src, alt, variants }) => (
     <motion.div 
-        className="overflow-hidden rounded-lg shadow-lg"
-        whileHover={{ scale: 1.03, zIndex: 10, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
+        className="overflow-hidden rounded-lg shadow-xl border-2 border-secondary/20"
+        whileHover={{ scale: 1.03, zIndex: 10, boxShadow: "0 25px 50px -12px rgba(37, 99, 235, 0.25)" }}
         transition={{ duration: 0.3 }}
         variants={variants}
     >
@@ -64,8 +64,8 @@ const CarSalesPage: React.FC = () => {
                     animate={{opacity: 1, y: 0}} 
                     transition={{duration: 0.6, ease: 'easeOut'}}
                 >
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-display text-center mb-4">Quality Pre-Owned <span className="text-primary">Vehicles</span></h1>
-                    <p className="text-base sm:text-lg text-light-text text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display text-center mb-4">Quality Pre-Owned <span className="text-secondary">Vehicles</span></h1>
+                    <p className="text-base sm:text-lg text-light-text text-center max-w-3xl mx-auto mb-12 sm:mb-16 font-bold">
                         Discover your next vehicle from our curated selection. Each car undergoes a rigorous inspection to ensure it meets our high standards of quality and reliability.
                     </p>
                 </motion.div>
@@ -91,8 +91,8 @@ const CarSalesPage: React.FC = () => {
                     animate={isBrandsInView ? "visible" : "hidden"}
                     variants={itemVariants}
                  >
-                     <h2 className="text-3xl sm:text-4xl font-bold font-display mb-8">Brands We Trust & Sell</h2>
-                     <div className="py-8">
+                     <h2 className="text-3xl sm:text-5xl font-black font-display mb-8 text-dark-text">Brands We Trust & Sell</h2>
+                     <div className="py-8 bg-light rounded-xl shadow-lg border-2 border-secondary/10">
                         <SimpleLogoLoop 
                             logos={[
                                 { src: '/car icons/bmw-svgrepo-com.svg', alt: 'BMW' },
@@ -138,17 +138,15 @@ const CarSalesPage: React.FC = () => {
                     animate={isCtaInView ? "visible" : "hidden"}
                     variants={itemVariants}
                 >
-                    <h2 className="text-3xl sm:text-4xl font-bold font-display text-primary mb-4">Ready to Find Your Next Car?</h2>
-                    <p className="text-base sm:text-lg text-light-text max-w-2xl mx-auto mb-8">
+                    <h2 className="text-3xl sm:text-5xl font-black font-display text-secondary mb-4">Ready to Find Your Next Car?</h2>
+                    <p className="text-base sm:text-lg text-light-text max-w-2xl mx-auto mb-8 font-bold">
                         Visit us today to see our full inventory and take a test drive. Our team is here to help you find the perfect car that fits your needs and budget.
                     </p>
-                    <Tooltip text="Contact us to find your perfect car">
-                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ duration: 0.2 }} className="inline-block">
-                            <a href="#/contact" className="bg-primary text-white font-bold font-display uppercase tracking-wider py-3 px-6 text-sm sm:text-base sm:py-4 sm:px-10 rounded-sm shadow-lg transition-transform duration-300">
-                               Find Your Next Car Today
-                            </a>
-                        </motion.div>
-                    </Tooltip>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ duration: 0.2 }} className="inline-block">
+                        <a href="#/contact" className="bg-secondary text-white font-black font-display uppercase tracking-wider py-3 px-6 text-sm sm:text-base sm:py-4 sm:px-10 rounded-md shadow-xl transition-transform duration-300 hover:bg-secondary-hover vibrant-shadow-blue">
+                           Find Your Next Car Today
+                        </a>
+                    </motion.div>
                 </motion.div>
             </div>
         </motion.div>

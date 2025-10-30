@@ -13,6 +13,20 @@
       html {
         scroll-behavior: smooth;
       }
+      /* Enhanced styling for more vibrant appearance */
+      body {
+        background-color: #ffffff;
+        color: #111827;
+      }
+      .vibrant-shadow-red {
+        box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.25), 0 8px 10px -6px rgba(220, 38, 38, 0.25);
+      }
+      .vibrant-shadow-blue {
+        box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.25), 0 8px 10px -6px rgba(37, 99, 235, 0.25);
+      }
+      .bold-text {
+        font-weight: 700;
+      }
     </style>
     <script>
       tailwind.config = {
@@ -23,11 +37,18 @@
               display: ['Orbitron', 'sans-serif'],
             },
             colors: {
-              'primary': '#2563EB',
-              'primary-hover': '#3B82F6',
-              'light': '#F3F4F6',
-              'dark-text': '#111827',
-              'light-text': '#374151',
+              'primary': '#dc2626', /* Red - primary accent color */
+              'primary-hover': '#b91c1c', /* Darker red for hover states */
+              'secondary': '#2563eb', /* Blue - secondary accent color */
+              'secondary-hover': '#1d4ed8', /* Darker blue for hover states */
+              'light': '#f8fafc', /* Very light for backgrounds */
+              'dark-text': '#0f172a', /* Darker for better contrast */
+              'light-text': '#334155', /* Slightly darker for better readability */
+              'white': '#ffffff', /* Pure white */
+              'red': '#dc2626', /* Standard red */
+              'blue': '#2563eb', /* Standard blue */
+              'american-red': '#B22234',
+              'american-blue': '#3C3B6E',
             }
           },
         },

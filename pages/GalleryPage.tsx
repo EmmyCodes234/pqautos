@@ -53,8 +53,8 @@ const GalleryPage: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
                     >
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-display text-center mb-4">Our Work in <span className="text-primary">Pictures</span></h1>
-                        <p className="text-base sm:text-lg text-light-text text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display text-center mb-4">Our Work in <span className="text-secondary">Pictures</span></h1>
+                        <p className="text-base sm:text-lg text-light-text text-center max-w-3xl mx-auto mb-12 sm:mb-16 font-bold">
                             Take a look at our state-of-the-art facility, the quality of our work, and some of the amazing vehicles we've had the pleasure of working on.
                         </p>
                     </motion.div>
@@ -69,13 +69,14 @@ const GalleryPage: React.FC = () => {
                         {galleryImages.map((image, index) => (
                             <motion.div
                                 key={index}
-                                className="group relative aspect-video cursor-pointer overflow-hidden rounded-lg shadow-lg"
+                                className="group relative aspect-video cursor-pointer overflow-hidden rounded-lg shadow-xl border-2 border-secondary/20"
                                 variants={itemVariants}
                                 onClick={() => setSelectedImage(index)}
+                                whileHover={{ scale: 1.03, boxShadow: "0 25px 50px -12px rgba(37, 99, 235, 0.25)" }}
                             >
                                 <OptimizedImage src={image.src} alt={image.alt} className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" />
                                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
-                                    <p className="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Image</p>
+                                    <p className="text-white text-lg font-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Image</p>
                                 </div>
                             </motion.div>
                         ))}

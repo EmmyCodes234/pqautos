@@ -71,41 +71,37 @@ const HomePage: React.FC = () => {
                 >
                     Your browser does not support the video tag.
                 </VideoOptimizer>
-                <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
+                <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                     className="relative z-20 px-4 py-12 sm:py-0">
-                    <h1 className="text-3xl sm:text-5xl md:text-7xl font-black font-display uppercase tracking-widest text-white drop-shadow-lg">
-                        Beyond <span className="text-primary">Performance</span>
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display uppercase tracking-widest text-white drop-shadow-2xl">
+                        Beyond <span className="text-white">Performance</span>
                     </h1>
-                    <p className="mt-4 text-sm sm:text-base md:text-xl max-w-2xl sm:max-w-3xl mx-auto text-gray-200">
+                    <p className="mt-4 text-base sm:text-lg md:text-2xl max-w-2xl sm:max-w-3xl mx-auto text-gray-100 font-bold">
                         From expert repairs to quality car sales, we have you covered.
                     </p>
-                    <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-                        <Tooltip text="Book your appointment now">
-                            <motion.div 
-                                whileHover={{ scale: 1.03 }} 
-                                whileTap={{ scale: 0.98 }}
-                                transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                            >
-                                <Link to="/services" className="inline-block bg-primary text-white font-bold font-display uppercase tracking-wider py-2.5 px-5 sm:py-3 sm:px-7 text-xs sm:text-sm rounded-sm shadow-lg transition-transform duration-300">
-                                    Schedule a Service
-                                </Link>
-                            </motion.div>
-                        </Tooltip>
-                        <Tooltip text="See our latest selection of cars">
-                            <motion.div 
-                                whileHover={{ scale: 1.03 }} 
-                                whileTap={{ scale: 0.98 }}
-                                transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                            >
-                                <Link to="/sales" className="inline-block bg-transparent border-2 border-white text-white font-bold font-display uppercase tracking-wider py-2.5 px-5 sm:py-3 sm:px-7 text-xs sm:text-sm rounded-sm shadow-lg transition-colors duration-300 hover:bg-white hover:text-dark-text">
-                                    View Car Inventory
-                                </Link>
-                            </motion.div>
-                        </Tooltip>
+                    <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+                        <motion.div 
+                            whileHover={{ scale: 1.05 }} 
+                            whileTap={{ scale: 0.98 }}
+                            transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                        >
+                            <Link to="/services" className="inline-block bg-primary text-white font-black font-display uppercase tracking-wider py-3 px-6 sm:py-4 sm:px-8 text-sm sm:text-base rounded-md shadow-xl transition-transform duration-300 hover:bg-primary-hover vibrant-shadow-red">
+                                Schedule a Service
+                            </Link>
+                        </motion.div>
+                        <motion.div 
+                            whileHover={{ scale: 1.05 }} 
+                            whileTap={{ scale: 0.98 }}
+                            transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                        >
+                            <Link to="/sales" className="inline-block bg-secondary text-white font-black font-display uppercase tracking-wider py-3 px-6 sm:py-4 sm:px-8 text-sm sm:text-base rounded-md shadow-xl transition-colors duration-300 hover:bg-secondary-hover vibrant-shadow-blue">
+                                View Car Inventory
+                            </Link>
+                        </motion.div>
                     </div>
                 </motion.div>
             </section>
@@ -114,22 +110,22 @@ const HomePage: React.FC = () => {
             <div className="bg-light py-16 sm:py-20">
                 <div className="container mx-auto px-4 sm:px-6">
                     <AnimatedSection>
-                        <h2 className="text-3xl sm:text-4xl font-bold font-display text-center mb-12">Our Core Services</h2>
+                        <h2 className="text-3xl sm:text-5xl font-black font-display text-center mb-12 text-dark-text">Our Core Services</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <motion.div whileHover={{ y: -10, boxShadow: "0 25px 50px -12px rgba(37, 99, 235, 0.2)" }} className="bg-white p-8 rounded-lg text-center transition-all duration-300 shadow-md">
+                            <motion.div whileHover={{ y: -10, boxShadow: "0 25px 50px -12px rgba(220, 38, 38, 0.25)" }} className="bg-white p-8 rounded-lg text-center transition-all duration-300 shadow-xl border-2 border-primary/20">
                                 <ToolIcon className="h-12 sm:h-16 w-12 sm:w-16 mx-auto text-primary mb-4" />
-                                <h3 className="text-xl sm:text-2xl font-bold font-display mb-2">Mechanical Repairs</h3>
-                                <p className="text-light-text text-sm sm:text-base">Expert diagnostics and repairs to keep your vehicle running smoothly.</p>
+                                <h3 className="text-xl sm:text-2xl font-black font-display mb-2">Mechanical Repairs</h3>
+                                <p className="text-light-text text-sm sm:text-base font-bold">Expert diagnostics and repairs to keep your vehicle running smoothly.</p>
                             </motion.div>
-                            <motion.div whileHover={{ y: -10, boxShadow: "0 25px 50px -12px rgba(37, 99, 235, 0.2)" }} className="bg-white p-8 rounded-lg text-center transition-all duration-300 shadow-md">
-                                <TireIcon className="h-12 sm:h-16 w-12 sm:w-16 mx-auto text-primary mb-4" />
-                                <h3 className="text-xl sm:text-2xl font-bold font-display mb-2">Tire Services</h3>
-                                <p className="text-light-text text-sm sm:text-base">Installation, balancing, rotation, and sales of new and used tires.</p>
+                            <motion.div whileHover={{ y: -10, boxShadow: "0 25px 50px -12px rgba(37, 99, 235, 0.25)" }} className="bg-white p-8 rounded-lg text-center transition-all duration-300 shadow-xl border-2 border-secondary/20">
+                                <TireIcon className="h-12 sm:h-16 w-12 sm:w-16 mx-auto text-secondary mb-4" />
+                                <h3 className="text-xl sm:text-2xl font-black font-display mb-2">Tire Services</h3>
+                                <p className="text-light-text text-sm sm:text-base font-bold">Installation, balancing, rotation, and sales of new and used tires.</p>
                             </motion.div>
-                            <motion.div whileHover={{ y: -10, boxShadow: "0 25px 50px -12px rgba(37, 99, 235, 0.2)" }} className="bg-white p-8 rounded-lg text-center transition-all duration-300 shadow-md">
+                            <motion.div whileHover={{ y: -10, boxShadow: "0 25px 50px -12px rgba(220, 38, 38, 0.25)" }} className="bg-white p-8 rounded-lg text-center transition-all duration-300 shadow-xl border-2 border-primary/20">
                                 <CarIcon className="h-12 sm:h-16 w-12 sm:w-16 mx-auto text-primary mb-4" />
-                                <h3 className="text-xl sm:text-2xl font-bold font-display mb-2">Car Sales</h3>
-                                <p className="text-light-text text-sm sm:text-base">A curated selection of quality-assured pre-owned vehicles.</p>
+                                <h3 className="text-xl sm:text-2xl font-black font-display mb-2">Car Sales</h3>
+                                <p className="text-light-text text-sm sm:text-base font-bold">A curated selection of quality-assured pre-owned vehicles.</p>
                             </motion.div>
                         </div>
                     </AnimatedSection>
@@ -140,11 +136,11 @@ const HomePage: React.FC = () => {
             <div className="bg-white py-16 sm:py-20">
                  <div className="container mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
                     <AnimatedSection>
-                        <OptimizedImage src="/pq1.jpg" alt="Expert mechanic working on a car" className="rounded-lg shadow-2xl" />
+                        <OptimizedImage src="/pq1.jpg" alt="Expert mechanic working on a car" className="rounded-lg shadow-2xl border-4 border-secondary" />
                     </AnimatedSection>
                     <AnimatedSection delay={0.2}>
-                        <h2 className="text-3xl sm:text-4xl font-bold font-display mb-6">Why Choose <span className="text-primary">PQ Autos?</span></h2>
-                        <p className="text-light-text mb-8 text-sm sm:text-base">
+                        <h2 className="text-3xl sm:text-5xl font-black font-display mb-6 text-dark-text">Why Choose <span className="text-secondary">PQ Autos?</span></h2>
+                        <p className="text-light-text mb-8 text-base sm:text-lg font-bold">
                             We're not just a garage; we're your partners in automotive care. We are committed to providing exceptional service, transparent pricing, and quality you can trust.
                         </p>
                         <motion.div 
@@ -155,24 +151,24 @@ const HomePage: React.FC = () => {
                             animate={isListInView ? "visible" : "hidden"}
                         >
                             <motion.div className="flex items-start" variants={listItemVariants}>
-                                <CheckCircleIcon className="h-8 w-8 text-primary mr-4 flex-shrink-0" />
+                                <CheckCircleIcon className="h-8 w-8 text-secondary mr-4 flex-shrink-0" />
                                 <div>
-                                    <h3 className="text-lg sm:text-xl font-bold">Expert Technicians</h3>
-                                    <p className="text-light-text text-sm sm:text-base">Our certified mechanics use the latest tools and technology.</p>
+                                    <h3 className="text-lg sm:text-xl font-black">Expert Technicians</h3>
+                                    <p className="text-light-text text-sm sm:text-base font-bold">Our certified mechanics use the latest tools and technology.</p>
                                 </div>
                             </motion.div>
                             <motion.div className="flex items-start" variants={listItemVariants}>
                                 <CheckCircleIcon className="h-8 w-8 text-primary mr-4 flex-shrink-0" />
                                 <div>
-                                    <h3 className="text-lg sm:text-xl font-bold">All-in-One Convenience</h3>
-                                    <p className="text-light-text text-sm sm:text-base">From oil changes to car sales, get everything you need in one place.</p>
+                                    <h3 className="text-lg sm:text-xl font-black">All-in-One Convenience</h3>
+                                    <p className="text-light-text text-sm sm:text-base font-bold">From oil changes to car sales, get everything you need in one place.</p>
                                 </div>
                             </motion.div>
                              <motion.div className="flex items-start" variants={listItemVariants}>
-                                <CheckCircleIcon className="h-8 w-8 text-primary mr-4 flex-shrink-0" />
+                                <CheckCircleIcon className="h-8 w-8 text-secondary mr-4 flex-shrink-0" />
                                 <div>
-                                    <h3 className="text-lg sm:text-xl font-bold">Quality-Assured Vehicles</h3>
-                                    <p className="text-light-text text-sm sm:text-base">Every car we sell passes a rigorous inspection for your peace of mind.</p>
+                                    <h3 className="text-lg sm:text-xl font-black">Quality-Assured Vehicles</h3>
+                                    <p className="text-light-text text-sm sm:text-base font-bold">Every car we sell passes a rigorous inspection for your peace of mind.</p>
                                 </div>
                             </motion.div>
                         </motion.div>

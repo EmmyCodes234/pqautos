@@ -42,8 +42,8 @@ const ServicesPage: React.FC = () => {
         >
             <div className="container mx-auto px-4 sm:px-6">
                 <AnimatedSection>
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-display text-center mb-4">Our <span className="text-primary">Services</span></h1>
-                    <p className="text-base sm:text-lg text-light-text text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display text-center mb-4">Our <span className="text-secondary">Services</span></h1>
+                    <p className="text-base sm:text-lg text-light-text text-center max-w-3xl mx-auto mb-12 sm:mb-16 font-bold">
                         We offer a comprehensive range of automotive services to meet all your needs. Quality workmanship and customer satisfaction are our top priorities.
                     </p>
                 </AnimatedSection>
@@ -53,27 +53,27 @@ const ServicesPage: React.FC = () => {
                         <Accordion defaultIndex={0}>
                             <AccordionItem title="Mechanical Repairs">
                                 <motion.ul 
-                                    className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 list-disc list-inside"
+                                    className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 list-disc list-inside text-light-text font-bold"
                                     variants={listContainerVariants}
                                     initial="collapsed"
                                     animate="open"
                                     exit="collapsed"
                                 >
                                     {MECHANICAL_REPAIRS.map(service => (
-                                        <motion.li key={service} variants={listItemVariants}>{service}</motion.li>
+                                        <motion.li key={service} variants={listItemVariants} className="pl-2 text-primary">{service}</motion.li>
                                     ))}
                                 </motion.ul>
                             </AccordionItem>
                             <AccordionItem title="Tire Installation & Services">
                                 <motion.ul 
-                                    className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 list-disc list-inside"
+                                    className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 list-disc list-inside text-light-text font-bold"
                                     variants={listContainerVariants}
                                     initial="collapsed"
                                     animate="open"
                                     exit="collapsed"
                                 >
                                     {TIRE_SERVICES.map(service => (
-                                        <motion.li key={service} variants={listItemVariants}>{service}</motion.li>
+                                        <motion.li key={service} variants={listItemVariants} className="pl-2 text-secondary">{service}</motion.li>
                                     ))}
                                 </motion.ul>
                             </AccordionItem>
@@ -86,9 +86,9 @@ const ServicesPage: React.FC = () => {
                                     exit="collapsed"
                                 >
                                     {SPECIALTY_SERVICES.map(service => (
-                                        <motion.div key={service.name} variants={listItemVariants}>
-                                            <h3 className="text-base sm:text-lg font-bold text-dark-text">{service.name}</h3>
-                                            <p>{service.description}</p>
+                                        <motion.div key={service.name} variants={listItemVariants} className="bg-light p-4 rounded-lg border-l-4 border-secondary">
+                                            <h3 className="text-base sm:text-lg font-black text-dark-text">{service.name}</h3>
+                                            <p className="font-bold">{service.description}</p>
                                         </motion.div>
                                     ))}
                                 </motion.div>
