@@ -81,9 +81,9 @@ const ContactPage: React.FC = () => {
             <div className="bg-white text-dark-text pt-12 sm:pt-16 pb-16 sm:pb-24">
                 <div className="container mx-auto px-4 sm:px-6">
                     <AnimatedSection>
-                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display text-center mb-4">Get In <span className="text-secondary">Touch</span></h1>
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display text-center mb-4">Get In <span className="text-secondary">Touch with PQ Autos</span></h1>
                         <p className="text-base sm:text-lg text-light-text text-center max-w-3xl mx-auto mb-12 sm:mb-16 font-bold">
-                            We're here to help with all your automotive needs. Contact us today to schedule a service, inquire about our inventory, or ask any questions you may have.
+                            We're here to help with all your automotive needs in Decatur, GA. Contact us today to schedule a service, inquire about our inventory, or ask any questions you may have.
                         </p>
                     </AnimatedSection>
 
@@ -97,6 +97,8 @@ const ContactPage: React.FC = () => {
                                         <p><strong>Address:</strong> {CONTACT_INFO.address}</p>
                                         <p><strong>Phone:</strong> <a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-secondary transition-colors font-black">{CONTACT_INFO.phone}</a></p>
                                         <p><strong>After Hours:</strong> <a href={`tel:${CONTACT_INFO.afterHoursPhone}`} className="hover:text-secondary transition-colors font-black">{CONTACT_INFO.afterHoursPhone}</a></p>
+                                        <p><strong>General Inquiries:</strong> <a href="mailto:info@pqautos.com" className="hover:text-secondary transition-colors font-black">info@pqautos.com</a></p>
+                                        <p><strong>Sales Department:</strong> <a href="mailto:sales@pqautos.com" className="hover:text-secondary transition-colors font-black">sales@pqautos.com</a></p>
                                     </div>
                                     <div className="mt-8">
                                         <h3 className="text-xl sm:text-3xl font-black font-display text-dark-text mb-4">Hours of Operation</h3>
@@ -115,6 +117,7 @@ const ContactPage: React.FC = () => {
                                         loading="lazy"
                                         referrerPolicy="no-referrer-when-downgrade"
                                         className="rounded-md border-2 border-secondary/20"
+                                        title="Prestige Quality Automotive LLC Location Map"
                                     ></iframe>
                                 </div>
                             </div>

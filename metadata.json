@@ -1,5 +1,34 @@
 {
-  "name": "PQ Autos",
-  "description": "A professional website for PQ Autos, a one-stop shop for automotive sales, mechanical repairs, and specialty services. The site features a modern design, service details, car inventory, and contact information.",
-  "requestFramePermissions": []
+  "name": "Prestige Quality Automotive LLC",
+  "description": "Premier automotive services in Decatur, GA. Expert car repairs, maintenance, tire services, and quality pre-owned vehicles. Serving Atlanta metro area with reliable transportation solutions.",
+  "requestFramePermissions": [],
+  "keywords": [
+    "auto repair",
+    "car repair",
+    "automotive services",
+    "car sales",
+    "pre-owned cars",
+    "tire services",
+    "vehicle maintenance",
+    "Decatur GA",
+    "Atlanta metro",
+    "mechanical repairs",
+    "car transportation",
+    "emissions testing"
+  ],
+  "business": {
+    "name": "Prestige Quality Automotive LLC",
+    "address": "2757 Wesley Chapel Road, Decatur, GA 30034",
+    "phone": "404-288-4332",
+    "email": "info@pqautos.com",
+    "salesEmail": "sales@pqautos.com",
+    "hours": "Monday - Saturday: 8:30 AM – 7:00 PM, Sunday: Closed"
+  },
+  "services": [
+    "Mechanical Repairs",
+    "Tire Services",
+    "Car Sales",
+    "Car Emissions Testing",
+    "Car Transportation"
+  ]
 }

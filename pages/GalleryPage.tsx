@@ -53,9 +53,9 @@ const GalleryPage: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
                     >
-                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display text-center mb-4">Our Work in <span className="text-secondary">Pictures</span></h1>
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display text-center mb-4">Our Work in <span className="text-secondary">Pictures - Decatur Auto Shop</span></h1>
                         <p className="text-base sm:text-lg text-light-text text-center max-w-3xl mx-auto mb-12 sm:mb-16 font-bold">
-                            Take a look at our state-of-the-art facility, the quality of our work, and some of the amazing vehicles we've had the pleasure of working on.
+                            Take a look at our state-of-the-art facility, the quality of our work, and some of the amazing vehicles we've had the pleasure of working on in Decatur, GA.
                         </p>
                     </motion.div>
 

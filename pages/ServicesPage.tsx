@@ -42,9 +42,9 @@ const ServicesPage: React.FC = () => {
         >
             <div className="container mx-auto px-4 sm:px-6">
                 <AnimatedSection>
-                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display text-center mb-4">Our <span className="text-secondary">Services</span></h1>
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display text-center mb-4">Our <span className="text-secondary">Automotive Services</span></h1>
                     <p className="text-base sm:text-lg text-light-text text-center max-w-3xl mx-auto mb-12 sm:mb-16 font-bold">
-                        We offer a comprehensive range of automotive services to meet all your needs. Quality workmanship and customer satisfaction are our top priorities.
+                        We offer a comprehensive range of automotive services to meet all your needs in Decatur, GA. Quality workmanship and customer satisfaction are our top priorities.
                     </p>
                 </AnimatedSection>
 

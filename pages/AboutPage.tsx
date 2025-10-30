@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '../components/AnimatedSection';
+import { BUSINESS_INFO } from '../constants';
 
 const AboutPage: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ const AboutPage: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <AnimatedSection>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display text-center mb-4">
-            About <span className="text-secondary">PQ Autos</span>
+            About <span className="text-secondary">Prestige Quality Automotive LLC</span>
           </h1>
         </AnimatedSection>
 
@@ -16,14 +17,14 @@ const AboutPage: React.FC = () => {
         <AnimatedSection>
           <div className="max-w-3xl mx-auto mt-12 sm:mt-16">
             <h2 className="text-2xl sm:text-4xl font-black font-display text-secondary mb-6 text-center">
-              Your Premier One-Stop Shop
+              Your Premier One-Stop Shop in Decatur, GA
             </h2>
             <div className="bg-light p-6 sm:p-8 rounded-lg shadow-xl border-2 border-secondary/20">
               <p className="text-base sm:text-lg text-light-text mb-4 font-bold">
-                At PQ Autos, we're proud to be your <strong>one-stop shop for all automotive needs</strong>. We built our business on the principle of convenience, quality, and trust, ensuring you have a single, reliable partner for every aspect of your car's life.
+                At {BUSINESS_INFO.name}, we're proud to be your <strong>one-stop shop for all automotive needs</strong> in the Decatur, GA area. We built our business on the principle of convenience, quality, and trust, ensuring you have a single, reliable partner for every aspect of your car's life.
               </p>
               <p className="text-base sm:text-lg text-light-text font-bold">
-                Whether you need expert <strong>repairs and maintenance</strong>, secure <strong>state-to-state car transportation</strong>, or are looking to purchase high-quality <strong>pre-owned vehicle</strong>, our team is here to provide seamless, professional service.
+                Whether you need expert <strong>repairs and maintenance</strong>, secure <strong>state-to-state car transportation</strong>, or are looking to purchase high-quality <strong>pre-owned vehicles</strong>, our team is here to provide seamless, professional service.
               </p>
             </div>
           </div>
@@ -32,10 +33,10 @@ const AboutPage: React.FC = () => {
         {/* Our Philosophy */}
         <AnimatedSection>
           <div className="max-w-3xl mx-auto mt-12 sm:mt-16">
-            <h2 className="text-2xl sm:text-4xl font-black font-display text-primary mb-6 text-center">
+            <h2 className="text-2xl sm:text-4xl font-black font-display text-secondary mb-6 text-center">
               "We Treat Your Car Like It's a Ferrari"
             </h2>
-            <div className="bg-light p-6 sm:p-8 rounded-lg shadow-xl border-2 border-primary/20">
+            <div className="bg-light p-6 sm:p-8 rounded-lg shadow-xl border-2 border-secondary/20">
               <p className="text-base sm:text-lg text-light-text mb-4 font-bold">
                 This isn't just a slogan—it's our core philosophy. We know your vehicle is more than just transportation; it's an investment and a vital part of your daily life. That's why every car that enters our shop receives the "Ferrari Treatment."
               </p>

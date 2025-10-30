@@ -64,9 +64,9 @@ const CarSalesPage: React.FC = () => {
                     animate={{opacity: 1, y: 0}} 
                     transition={{duration: 0.6, ease: 'easeOut'}}
                 >
-                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display text-center mb-4">Quality Pre-Owned <span className="text-secondary">Vehicles</span></h1>
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display text-center mb-4">Quality Pre-Owned <span className="text-secondary">Vehicles in Decatur, GA</span></h1>
                     <p className="text-base sm:text-lg text-light-text text-center max-w-3xl mx-auto mb-12 sm:mb-16 font-bold">
-                        Discover your next vehicle from our curated selection. Each car undergoes a rigorous inspection to ensure it meets our high standards of quality and reliability.
+                        Discover your next vehicle from our curated selection of quality pre-owned cars in Decatur, GA. Each car undergoes a rigorous inspection to ensure it meets our high standards of quality and reliability.
                     </p>
                 </motion.div>
 
@@ -91,7 +91,7 @@ const CarSalesPage: React.FC = () => {
                     animate={isBrandsInView ? "visible" : "hidden"}
                     variants={itemVariants}
                  >
-                     <h2 className="text-3xl sm:text-5xl font-black font-display mb-8 text-dark-text">Brands We Trust & Sell</h2>
+                     <h2 className="text-3xl sm:text-5xl font-black font-display mb-8 text-dark-text">Brands We Trust & Sell in Decatur</h2>
                      <div className="py-8 bg-light rounded-xl shadow-lg border-2 border-secondary/10">
                         <SimpleLogoLoop 
                             logos={[
@@ -138,9 +138,9 @@ const CarSalesPage: React.FC = () => {
                     animate={isCtaInView ? "visible" : "hidden"}
                     variants={itemVariants}
                 >
-                    <h2 className="text-3xl sm:text-5xl font-black font-display text-secondary mb-4">Ready to Find Your Next Car?</h2>
+                    <h2 className="text-3xl sm:text-5xl font-black font-display text-secondary mb-4">Ready to Find Your Next Car in Decatur?</h2>
                     <p className="text-base sm:text-lg text-light-text max-w-2xl mx-auto mb-8 font-bold">
-                        Visit us today to see our full inventory and take a test drive. Our team is here to help you find the perfect car that fits your needs and budget.
+                        Visit us today to see our full inventory and take a test drive. Our team is here to help you find the perfect car that fits your needs and budget in the Atlanta metro area.
                     </p>
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ duration: 0.2 }} className="inline-block">
                         <a href="#/contact" className="bg-secondary text-white font-black font-display uppercase tracking-wider py-3 px-6 text-sm sm:text-base sm:py-4 sm:px-10 rounded-md shadow-xl transition-transform duration-300 hover:bg-secondary-hover vibrant-shadow-blue">

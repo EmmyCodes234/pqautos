@@ -1,3 +1,24 @@
+// Business Information for SEO
+export const BUSINESS_INFO = {
+    name: "Prestige Quality Automotive LLC",
+    legalName: "Prestige Quality Automotive LLC",
+    description: "Premier automotive services in Decatur, GA. Expert car repairs, maintenance, tire services, and quality pre-owned vehicles. Serving Atlanta metro area with reliable transportation solutions.",
+    address: "2757 Wesley Chapel Road, Decatur, GA 30034",
+    city: "Decatur",
+    state: "GA",
+    zipCode: "30034",
+    country: "USA",
+    phone: "404-288-4332",
+    afterHoursPhone: "678-891-7661",
+    email: "info@pqautos.com",
+    salesEmail: "sales@pqautos.com",
+    website: "https://www.pqautos.com",
+    primaryServiceArea: "Atlanta Metro Area",
+    coordinates: {
+        latitude: 33.746986,
+        longitude: -84.212582
+    }
+};
 
 export const MECHANICAL_REPAIRS = [
     "Oil Change",
@@ -50,4 +71,13 @@ export const HOURS = {
     weekday: "Monday - Saturday: 8:30 AM – 7:00 PM",
     weekend: "Sunday: Closed",
     holidays: "Closed on most public holidays, including: New Year's Day, Easter, President's Day, Independence Day, Labor Day, Thanksgiving Day, and Christmas Day."
+};
+
+// SEO Keywords for different sections
+export const SEO_KEYWORDS = {
+    home: ["auto repair Decatur GA", "car repair Atlanta metro", "vehicle maintenance Decatur", "quality car service GA"],
+    services: ["mechanical repairs Decatur", "tire services GA", "car maintenance Atlanta", "automotive services Decatur GA"],
+    sales: ["used cars Decatur GA", "pre-owned vehicles Atlanta", "quality car sales GA", "certified pre-owned cars"],
+    about: ["automotive shop Decatur", "car repair experts GA", "reliable auto service Atlanta", "trusted mechanics Decatur GA"],
+    contact: ["auto shop hours Decatur", "car repair contact GA", "vehicle service appointment", "automotive shop phone number"]
 };

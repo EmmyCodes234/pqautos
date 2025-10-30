@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 // Fix: Import Variants type from framer-motion to correctly type animation variants.
 import { motion, useInView, Variants } from 'framer-motion';
 import AnimatedSection from '../components/AnimatedSection';
-import Tooltip from '../components/Tooltip';
 import VideoOptimizer from '../components/VideoOptimizer';
 import OptimizedImage from '../components/ImageOptimizer';
+import { BUSINESS_INFO } from '../constants';
 
 const ToolIcon: React.FC<{ className?: string }> = ({ className }) => (
     <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
@@ -35,6 +35,38 @@ const CheckCircleIcon: React.FC<{ className?: string }> = ({ className }) => (
     </svg>
 );
 
+// Structured data for SEO
+const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": BUSINESS_INFO.name,
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": BUSINESS_INFO.address,
+        "addressLocality": BUSINESS_INFO.city,
+        "addressRegion": BUSINESS_INFO.state,
+        "postalCode": BUSINESS_INFO.zipCode,
+        "addressCountry": BUSINESS_INFO.country
+    },
+    "telephone": BUSINESS_INFO.phone,
+    "email": BUSINESS_INFO.email,
+    "openingHours": [
+        "Mo-Sa 08:30-19:00",
+        "Su Closed"
+    ],
+    "priceRange": "$$",
+    "description": BUSINESS_INFO.description,
+    "url": BUSINESS_INFO.website,
+    "areaServed": BUSINESS_INFO.primaryServiceArea,
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": BUSINESS_INFO.coordinates.latitude,
+        "longitude": BUSINESS_INFO.coordinates.longitude
+    },
+    "sameAs": [
+        BUSINESS_INFO.website
+    ]
+};
 
 const HomePage: React.FC = () => {
     const listContainerVariants = {
@@ -63,6 +95,11 @@ const HomePage: React.FC = () => {
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
         >
+            {/* Structured Data for SEO */}
+            <script type="application/ld+json">
+                {JSON.stringify(structuredData)}
+            </script>
+            
             {/* Hero Section */}
             <section className="relative min-h-[500px] sm:min-h-screen flex items-center justify-center text-center overflow-hidden">
                 <VideoOptimizer
@@ -136,7 +173,7 @@ const HomePage: React.FC = () => {
             <div className="bg-white py-16 sm:py-20">
                  <div className="container mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
                     <AnimatedSection>
-                        <OptimizedImage src="/pq1.jpg" alt="Expert mechanic working on a car" className="rounded-lg shadow-2xl border-4 border-secondary" />
+                        <OptimizedImage src="/pq1.jpg" alt="Expert mechanic working on a car at Prestige Quality Automotive LLC" className="rounded-lg shadow-2xl border-4 border-secondary" />
                     </AnimatedSection>
                     <AnimatedSection delay={0.2}>
                         <h2 className="text-3xl sm:text-5xl font-black font-display mb-6 text-dark-text">Why Choose <span className="text-secondary">PQ Autos?</span></h2>

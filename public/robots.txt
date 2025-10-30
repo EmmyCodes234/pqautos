@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://www.pqautos.com/sitemap.xml
+
+# SEO directives
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
